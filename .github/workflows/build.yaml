@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
 
+env:
+  GH_TOKEN: ${{ secrets.REPO_PAT }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
