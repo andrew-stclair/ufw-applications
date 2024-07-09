@@ -1,0 +1,35 @@
+name: build
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: create sample script
+        run: |
+          mkdir -p package
+          # mkdir -p .debpkg/usr/lib/samplescript
+          # echo -e "echo sample" > .debpkg/usr/bin/samplescript
+          # chmod +x .debpkg/usr/bin/samplescript
+          # echo -e "a=1" > .debpkg/usr/lib/samplescript/samplescript.conf
+
+          # # create DEBIAN directory if you want to add other pre/post scripts
+          # mkdir -p .debpkg/DEBIAN
+          # echo -e "echo postinst" > .debpkg/DEBIAN/postinst
+          # chmod +x .debpkg/DEBIAN/postinst
+      - uses: jiro4989/build-deb-action@v3
+        with:
+          package: ufw-applications
+          package_root: package
+          maintainer: ${{ github.repository_owner }}
+          version: ${{ github.ref }} # refs/tags/v*.*.*
+          arch: 'any'
+          depends: 'ufw'
+          desc: 'Extra UFW app profiles'
+          homepage: ${{ github.server_url }}/${{ github.repository }}
