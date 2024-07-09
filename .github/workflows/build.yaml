@@ -33,7 +33,7 @@ jobs:
           package_root: package
           maintainer: ${{ github.repository_owner }}
           version: ${{ github.ref }} # refs/tags/v*.*.*
-          arch: 'any'
+          arch: 'all'
           depends: 'ufw'
           desc: 'Extra UFW app profiles'
           homepage: ${{ github.server_url }}/${{ github.repository }}
@@ -44,3 +44,5 @@ jobs:
           files: ${{ steps.build_deb.outputs.file_name }}
           generate_release_notes: true
           make_latest: true
+
+# https://github.com/andrew-stclair/ufw-applications/releases/download/v0.0.1/ufw-applications_0.0.1_any.deb
