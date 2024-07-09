@@ -49,8 +49,9 @@ jobs:
           make_latest: true
       - name: Add to repo
         run: |
-          REF_V=$(echo "${{ github.ref }}" | sed 's/v//g')
-          gh workflow run import.yaml --repo andrew-stclair/repo.andrew-stclair.com --field package=https://github.com/andrew-stclair/ufw-applications/releases/download/${{ github.ref }}/ufw-applications_${REF_V}_any.deb
+          REF=$(echo "${{ github.ref }}" | cut -d '/' -f3 | sed 's/v//g')
+          REF_V=$(echo "${{ github.ref }}" | cut -d '/' -f3)
+          gh workflow run import.yaml --repo andrew-stclair/repo.andrew-stclair.com --field package=https://github.com/andrew-stclair/ufw-applications/releases/download/${REF_V}/ufw-applications_${REF}_any.deb
 
 # https://github.com/andrew-stclair/ufw-applications/releases/download/v0.0.1/ufw-applications_0.0.1_any.deb
 # andrew-stclair/repo.andrew-stclair.com
