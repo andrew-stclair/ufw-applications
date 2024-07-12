@@ -8,9 +8,6 @@ on:
 permissions:
   contents: write
 
-env:
-  GH_TOKEN: ${{ secrets.REPO_PAT }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -49,10 +46,4 @@ jobs:
           make_latest: true
       - name: Add to repo
         run: |
-          REF=$(echo "${{ github.ref }}" | cut -d '/' -f3 | sed 's/v//g')
-          REF_V=$(echo "${{ github.ref }}" | cut -d '/' -f3)
-          gh workflow run import.yaml --repo andrew-stclair/repo.andrew-stclair.com --field package=https://github.com/andrew-stclair/ufw-applications/releases/download/${REF_V}/ufw-applications_${REF}_all.deb
-
-# https://github.com/andrew-stclair/ufw-applications/releases/download/v0.0.1/ufw-applications_0.0.1_all.deb
-# andrew-stclair/repo.andrew-stclair.com
-# import.yaml
+          curl -u "${{ secrets.APT_CREDENTIALS }}" -H "Content-Type: multipart/form-data" --data-binary "@${{ steps.build_deb.outputs.file_name }}" "https://repo.andrew-stclair.com/repository/internal/"
