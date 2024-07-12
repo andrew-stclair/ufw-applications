@@ -1,4 +1,0 @@
-[SSH]
-title=SSH server
-description=SSH server
-ports=22/tcp

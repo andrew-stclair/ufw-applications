@@ -1,0 +1,4 @@
+[ossec]
+title=OSSEC
+description=Host Based Intrusion Detection System
+ports=1514/udp,1515/tcp

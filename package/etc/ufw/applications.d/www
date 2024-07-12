@@ -1,0 +1,9 @@
+[www]
+title=Web Server
+description=Web server
+ports=80/tcp
+
+[www-secure]
+title=Web Server (HTTPS)
+description=Web Server (HTTPS)
+ports=443/tcp

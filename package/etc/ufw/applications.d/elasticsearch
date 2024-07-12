@@ -1,4 +1,4 @@
-[ElasticSearch]
+[elasticsearch]
 title=elasticsearch
 description=Distributed RESTful search engine built for the cloud
 ports=9200,9300/tcp

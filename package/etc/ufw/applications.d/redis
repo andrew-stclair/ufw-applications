@@ -1,4 +1,4 @@
-[Redis]
+[redis]
 title=Redis
 description=Persistent key-value database
 ports=6379/tcp

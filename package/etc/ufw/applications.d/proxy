@@ -1,0 +1,4 @@
+[socks]
+title=Socks proxy
+description=Socks proxy
+ports=1080/tcp

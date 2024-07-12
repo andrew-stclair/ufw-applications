@@ -1,4 +1,0 @@
-[Bonjour]
-title=Bonjour
-description=Bonjour protocol
-ports=5353/udp|5298

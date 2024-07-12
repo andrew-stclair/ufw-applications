@@ -1,0 +1,4 @@
+[privoxy]
+title=Privoxy
+description=Web proxy with advanced filtering capabilities
+ports=8118/tcp

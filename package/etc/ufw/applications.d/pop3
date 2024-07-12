@@ -1,0 +1,9 @@
+[pop3]
+title=Mail server (POP3)
+description=Mail server (POP3)
+ports=110/tcp
+
+[pop3s]
+title=Secure mail server (POP3S)
+description=Secure mail server (POP3S)
+ports=995/tcp

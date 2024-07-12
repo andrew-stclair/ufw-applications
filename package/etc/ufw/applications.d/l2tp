@@ -1,0 +1,4 @@
+[l2tp]
+title=Layer 2 Tunneling Protocol
+description=VPN/tunnel
+ports=1701/udp

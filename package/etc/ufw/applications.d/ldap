@@ -1,0 +1,9 @@
+[LDAP]
+title=LDAP server
+description=LDAP server
+ports=389/tcp
+
+[ldaps]
+title=LDAP server (LDAPS)
+description=LDAP server (LDAPS)
+ports=636/tcp
