@@ -1,9 +1,0 @@
-[msn]
-title=MSN Chat
-description=MSN chat protocol (with file transfer and voice)
-ports=1863|6891:6900/tcp|6901
-
-[msn-ssl]
-title=MSN Chat (SSL)
-description=MSN chat protocol (SSL)
-ports=443/tcp

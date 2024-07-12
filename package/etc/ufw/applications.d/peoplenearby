@@ -1,4 +1,0 @@
-[peoplenearby]
-title=People Nearby
-description=People Nearby (Bonjour/Salut) functionality in Empathy
-ports=5353/udp|5298

@@ -1,4 +1,0 @@
-[ktorrent]
-title=KTorrent
-description=KTorrent BitTorrent client
-ports=6881/tcp|4444/udp

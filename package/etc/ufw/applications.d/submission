@@ -1,4 +1,0 @@
-[mail-submission]
-title=Mail server (Submission)
-description=Mail server (Submission)
-ports=587/tcp

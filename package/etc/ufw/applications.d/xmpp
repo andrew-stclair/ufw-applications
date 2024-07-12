@@ -1,4 +1,0 @@
-[xmpp]
-title=XMPP Chat
-description=XMPP protocol (Jabber and Google Talk)
-ports=5222/tcp|5269/tcp
