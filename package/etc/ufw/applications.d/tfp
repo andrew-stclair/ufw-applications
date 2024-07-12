@@ -1,4 +1,4 @@
-[tftp]
+[TFTP]
 title=TFTP
 description=Trivial File Transfer Protocol (RFC 783)
 ports=69/udp

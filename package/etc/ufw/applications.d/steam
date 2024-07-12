@@ -1,9 +1,9 @@
-[steam-client]
+[Steam Client]
 title=Steam Client
 description=Firewall rules for the Steam client remote play
 ports=27031:27036/udp|27036:27037/tcp
 
-[steam-servers]
+[Steam Server]
 title=Steam Dedicated/Listen Servers
 description=Firewall rules for Steam Dedicated or Listen Servers
 ports=27000:27030/udp|27015/tcp

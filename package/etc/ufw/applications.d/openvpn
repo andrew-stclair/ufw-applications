@@ -1,4 +1,4 @@
-[openvpn]
+[OpenVPN]
 title=OpenVPN
 description=Virtual private network or secure tunnel daemon.
 ports=1194
