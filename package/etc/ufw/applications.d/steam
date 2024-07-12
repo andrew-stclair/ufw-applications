@@ -6,4 +6,4 @@ ports=27031:27036/udp|27036/tcp
 [steam-servers]
 title=Steam Dedicated/Listen Servers
 description=Firewall rules for Steam Dedicated or Listen Servers
-ports=27015
+ports=27000:27030/udp|27015/tcp
