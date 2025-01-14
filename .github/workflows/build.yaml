@@ -36,6 +36,7 @@ jobs:
           arch: 'all'
           depends: 'ufw'
           desc: 'Extra UFW app profiles'
+          section: 'admin'
           homepage: ${{ github.server_url }}/${{ github.repository }}
       - name: Release
         uses: softprops/action-gh-release@v2
