@@ -44,6 +44,6 @@ jobs:
           files: ${{ steps.build_deb.outputs.file_name }}
           generate_release_notes: true
           make_latest: true
-      - name: Add to repo
-        run: |
-          curl -u "${{ secrets.APT_CREDENTIALS }}" -H "Content-Type: multipart/form-data" --data-binary "@${{ steps.build_deb.outputs.file_name }}" "https://repo.andrew-stclair.com/repository/apt-hosted/"
+#      - name: Add to repo
+#        run: |
+#          curl -u "${{ secrets.APT_CREDENTIALS }}" -H "Content-Type: multipart/form-data" --data-binary "@${{ steps.build_deb.outputs.file_name }}" "https://repo.andrew-stclair.com/repository/apt-hosted/"
